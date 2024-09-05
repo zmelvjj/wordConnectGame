@@ -1,0 +1,91 @@
+body {
+    background-color: rgb(211, 211, 211);
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+.textBox {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    user-select: none;
+    font-size: 14vh;
+    text-align: center;
+    font-family: 'goorm-sans-bold', sans-serif;
+    
+    min-width: 25vh;
+    min-height: 16vh;
+    transform: translate(0, -40%);
+}
+.textBox::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 2vh;
+    height: 1vh;
+    background-color: black;
+  }
+
+.hidden-input {
+    position: absolute;
+    left: -9999px; /* 화면에서 숨기기 */
+}
+
+.scoreboard {
+    position: absolute;
+    font-family: 'CookieRun-Regular', sans-serif;
+    font-size: 5vh;
+    top: 2vh;
+}
+
+.sideBox {
+    position: absolute;
+    font-family: 'CookieRun-Regular', sans-serif;
+    font-size: 4vh;
+    top: 18vh;
+}
+
+.PreviousWord {
+    position: absolute;
+    font-family: 'CookieRun-Regular', sans-serif;
+    font-size: 8vh;
+    left: 23vw;
+
+    transform: translate(-50%);
+}
+/* 255, 153, 0 */
+.upBackgorundColor { 
+    position: absolute;
+    transform: translate(0, -50%);
+    background: linear-gradient(to bottom,rgb(82, 82, 82, 1) 10%, rgb(134, 134, 134, 1) 80%, rgba(134, 134, 134, 0.8) 90%, rgba(0, 0, 0, 0) 100%);
+    width: 100vw;
+    height: 70vh;
+    top: 34vh;
+}
+
+@font-face {
+    font-family: 'HakgyoansimDunggeunmisoTTF-B';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimDunggeunmisoTTF-B.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CookieRun-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'goorm-sans-bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/goorm-sans-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}

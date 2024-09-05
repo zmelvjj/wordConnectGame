@@ -1,0 +1,18 @@
+.HpTool {
+    position: absolute;
+    border-radius: 5vh;
+    border: 0.6vh solid black;
+    height: 5vh;
+    width: 80vw;
+    top: 80vh;
+}
+
+.Hpbar {
+    position: absolute;
+    border-radius: 5vh;
+    height: 0vh;
+    border: 2vh solid black;
+    width: 77vw;
+    top: 5px;
+    left: 5px;
+}
