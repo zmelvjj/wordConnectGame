@@ -1,5 +1,6 @@
 body {
     background-color: rgb(211, 211, 211);
+    transition: all 0.5s;
 }
 .container {
     display: flex;
@@ -67,6 +68,13 @@ body {
     width: 100vw;
     height: 70vh;
     top: 34vh;
+}
+
+.hitEffect {
+    position: absolute;
+    background: linear-gradient(to bottom,red 1%,rgba(255,0,0,0) 10%);
+    width: 100vw;
+    height: 100vh;
 }
 
 @font-face {

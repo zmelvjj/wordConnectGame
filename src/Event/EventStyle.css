@@ -1,0 +1,5 @@
+.Night_Scroll {
+    position: absolute;
+    width: 10vw;
+    background-image: linear-gradient(100% black);
+}

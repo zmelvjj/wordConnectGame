@@ -1,0 +1,39 @@
+.HpTool {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    border-radius: 5vh;
+    border: 0.6vh solid black;
+    height: 5vh;
+    width: 80vw;
+    top: 80vh;
+}
+
+.Hpbar {
+    position: relative;
+    border-radius: 5vh;
+    height: 90%;
+    width: 99%;
+    max-width: 99%;
+    min-width: 2%;
+    background-color: rgb(0, 0, 0);
+    margin: 0.5%;
+    transition: all 0.2s ease;
+}
+
+.endGameScreen {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    font-family: 'CookieRun-Regular', sans-serif;
+    width: 50vw;
+    height: 30vw;
+    border-radius: 4vh;
+    border: 0.7vh solid rgb(39, 39, 39);
+    transform: translate(0,-50%);
+    top: -150vh;
+    background-color: rgb(212, 212, 212);
+    transition: all 1s ease-out;
+}

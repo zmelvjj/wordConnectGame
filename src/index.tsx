@@ -1,16 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import MainUI from './MainInputUI';
-import HPbar from './HPbar';
+import HPbar from './HPSystem';
+import EvnetList from './EvnetList'
 import reportWebVitals from './reportWebVitals';
+import "./MainInputUI.css"
+import { DataSet } from './PlayData';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
+    <div className='container'>
+      <DataSet>
         <MainUI />
         <HPbar />
+        <EvnetList />
+      </DataSet>
+    </div>
   </React.StrictMode>
 );
 
