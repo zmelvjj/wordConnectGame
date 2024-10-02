@@ -11,6 +11,7 @@ export const DataSet: React.FC<{ children: ReactNode }> = ({ children }:any)=>{
     const InputState = useRef<boolean>(true)
     const hiddenInput = useRef<HTMLInputElement>(null)
     const Score = useRef<number>(0)
+    const word_Count = useRef<number>(0)
 
     const maxHp = useRef<number>(-1);
     const health = useRef<number>(0);
@@ -18,7 +19,7 @@ export const DataSet: React.FC<{ children: ReactNode }> = ({ children }:any)=>{
 
   
     return (
-      <DataContext.Provider value={{ displayText, PreviousText, sideText, wordList, starterWord, maxHp, health, isGame, InputState, Score, hiddenInput }}>
+      <DataContext.Provider value={{ displayText, PreviousText, sideText, wordList, starterWord, maxHp, health, isGame, InputState, Score, hiddenInput, word_Count }}>
         {children}
       </DataContext.Provider>
     );

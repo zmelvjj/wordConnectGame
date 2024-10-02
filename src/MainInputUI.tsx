@@ -11,8 +11,17 @@ export let ResetMainUI:Function;
 const MainInputUI:React.FC = ()=>{
   const { displayText, PreviousText, sideText, wordList, starterWord, InputState, Score, hiddenInput } = usePlayData();
   const [score,setScore] = useState<number>(0)
-
+  
   Score.current = score;
+  fetch("http://localhost:1234/"+"multiPlay",{
+    method:"POST",
+    headers: {  
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ word: "awd" })
+  }).then((response) => response.json()).then((data) => {
+
+  })
 
   ResetMainUI = ()=>{
     wordList.current = [""];

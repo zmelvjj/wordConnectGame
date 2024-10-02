@@ -2,17 +2,16 @@ import React,{ useRef, useState, useEffect } from "react";
 import "./HP.css"
 import { ResetMainUI } from "./MainInputUI";
 import { usePlayData } from "./PlayData";
+import { StopEvent } from "./EvnetList";
 
 export let HP:Function;
-export let WordCount:number = 0;
 
 const HPbar:React.FC = ()=>{
     const bar = useRef<HTMLDivElement | null>(null)
     const endGameScreen = useRef<HTMLDivElement | null>(null)
     const [wordCount, setCount] = useState<number>(0);
-    WordCount = wordCount;
-    
-    const {isGame, maxHp, health, InputState, Score, PreviousText} = usePlayData()
+    const {isGame, maxHp, health, InputState, Score, PreviousText, word_Count} = usePlayData()
+    word_Count.current = wordCount;
     
     HP = (int:number)=>{
         health.current += maxHp.current*int/100;
@@ -39,6 +38,7 @@ const HPbar:React.FC = ()=>{
                     PreviousText.current.style.color = "black"
 
                     isGame.current = false;
+                    StopEvent() 
                 }
 
                 health.current -= maxHp.current*1/(1000+wordCount*10);

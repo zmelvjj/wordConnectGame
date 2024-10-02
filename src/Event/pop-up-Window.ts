@@ -12,7 +12,7 @@ const Pop_up_Window:React.FC = ()=>{
     endPopUp_Event = ()=>{
         
     }
-
+    
     return null
 }
 

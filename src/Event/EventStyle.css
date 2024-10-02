@@ -1,5 +1,57 @@
 .Night_Scroll {
+    accent-color: #000000; /* 슬라이더 색상 변경 */
+    width: 92%; /* 너비 설정 */
+}
+
+.Night_ScrollBoader{
     position: absolute;
-    width: 10vw;
-    background-image: linear-gradient(100% black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9vw;
+    height: 1.5vh;
+    border: 0.5vh, solid black;
+    border-radius: 5vw;
+
+    left: 1vw;
+    top:1vh
+}
+
+.Night_Background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0;
+}
+
+.errorBackground{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(155, 155, 155);
+    color: rgb(88, 0, 0);
+    user-select: text;
+}
+
+.dummy{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    border-radius: 2vh;
+    width: 40vw;
+    height: 25vw;
+    background-color: white;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 0.5vw solid black;
+    font-size: 4vw;
+    font-family: 'CookieRun-Regular', sans-serif;
 }
