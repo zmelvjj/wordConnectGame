@@ -1,0 +1,17 @@
+{
+  "t": {
+    "Username": "t",
+    "Password": "123",
+    "Point": 1000
+  },
+  "b": {
+    "Username": "b",
+    "Password": "234",
+    "Point": -1
+  },
+  "a123": {
+    "Username": "a123",
+    "Password": "as1235g",
+    "Point": 0
+  }
+}
