@@ -77,7 +77,7 @@ app.use(express.json())
 
 //----------표준국어대사전 API사용
 
-const apiKey = "02423E4592ADEA654ADB100B20FDAAA6";
+const apiKey = "APIKEY";   //apiKey는 게인정보이기때문에 코드 사용시 표준국어대시전 api에서 key를 받아야함.
 
 //----------------단어존재여부
 const checkWord = (word,callback)=>{
