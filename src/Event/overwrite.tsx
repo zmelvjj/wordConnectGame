@@ -3,12 +3,24 @@ import React,{useState,useRef} from "react";
 export let overwrite:Function
 export let endOverwrite:Function
 
+const count = 3 //반복횟수
+
 const Overwrite:React.FC = ()=>{
     const [component, setComponent] = useState<number[]>([])
     const componentPosList = useRef<Array<number[]>>([])
 
     overwrite = ()=>{
-        addComponent()
+        let num = 0;
+
+        const root = ()=>{
+            addComponent()
+            num++
+
+            if (num < count){
+                setTimeout(root,500)
+            }
+        }
+        root()
     }
 
     endOverwrite = ()=>{
@@ -16,7 +28,7 @@ const Overwrite:React.FC = ()=>{
     }
 
     const addComponent = ()=>{
-        setComponent([...component, component.length]);
+        setComponent(prevComponent => [...prevComponent, prevComponent.length]);
     }
 
     const removeComponent = (index:number)=>{
